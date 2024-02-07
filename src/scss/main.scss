@@ -1,0 +1,37 @@
+// Import variables and partials
+@import 'variable';
+@import 'partials/header';
+@import 'partials/footer';
+
+// Body styling
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+
+    // Dark mode
+    @media (prefers-color-scheme: dark) {
+        background-color: $dark-background-color;
+        color: $dark-text-color;
+    }
+
+    // Responsive font size
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+// Main content styling
+.content {
+    padding: 20px;
+
+    h1 {
+        color: $primary-color;
+        font-size: 24px;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+}

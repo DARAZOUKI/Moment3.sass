@@ -6,10 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html --no-cache --no-source-maps",
     "build": "parcel build src/index.html --no-cache --no-source-maps",
-    "transpile-js": "babel src -d dist --presets @babel/preset-env",
-    "minify-js": "terser dist/java.js -o dist/java.min.js",
-    "minify-css": "cssnano styles.css -o output.min.css",
-    "optimize-images": "node optimize-images.js",
+    "watch": "parcel watch index.html",
     "minify-html": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir src --output-dir dist"
   },
   "repository": {
@@ -21,13 +18,17 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "autoprefixer": "^10.4.17",
+    "@parcel/transformer-sass": "^2.11.0",
+    "autoprefixer": "^10.0.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "cssnano": "^5.1.15",
     "events": "^3.3.0",
     "html-minifier": "^4.0.0",
     "parcel": "^2.11.0",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.4.35",
+    "postcss-custom-properties": "^13.3.4",
+    "sass": "^1.70.0"
   }
 }
