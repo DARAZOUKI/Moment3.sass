@@ -1,23 +1,37 @@
 header {
   background-color: #3498db;
-  padding: 10px;
+}
+header h1 {
+  color: #fff;
 }
 header nav ul {
   list-style: none;
-  display: flex;
-  justify-content: space-around;
+  padding: 0;
 }
-header nav ul li a {
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+header nav ul li a, header nav ul li li.active {
   text-decoration: none;
-  color: white;
+  color: #fff;
+}
+header nav ul li a:hover, header nav ul li li.active:hover {
+  color: #2ecc71;
+}
+header nav ul li.active {
   font-weight: bold;
 }
 
 footer {
+  background-color: #3498db;
+  color: #fff;
   text-align: center;
   padding: 10px;
-  background-color: #3498db;
-  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #217dbb;
 }
 
 body {
@@ -61,7 +75,7 @@ nav {
   display: none;
   z-index: 1;
 }
-nav a {
+nav a, header nav ul li.active {
   font-size: 0.7em;
   margin-left: 20px;
   text-decoration: none;
@@ -89,38 +103,45 @@ nav ul li {
 }
 nav .menu-btn.close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 10px; /* Adjust the top value as needed */
+  right: 10px; /* Adjust the right value as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #E5C643;
+  border: 2px solid #2C363F;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2; /* Ensure the close button is above other elements */
 }
 nav .menu-btn:hover {
   background-color: #F2F5EA;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
 }
 nav .menu-btn {
-  display: none;
-  position: fixed;
-  top: 10px;
-  right: 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
   background-color: #E5C643;
-  border: 2px solid #2C363F;
-  border-radius: 5px;
+  border: rgb(0, 0, 0) solid 2px;
   cursor: pointer;
-  z-index: 2;
+  border-radius: 5px; /* Add rounded corners */
   height: 10vh;
 }
 nav .menu-icon {
   margin-right: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Center the bars */
 }
 nav .bars {
   display: block;
-  width: 30px;
+  width: 80px;
   height: 3px;
   background-color: #2C363F;
   margin: 5px 0;
-  border-radius: 3px;
+  border-radius: 3px; /* Add rounded corners */
 }
 nav .c1, nav .c2 {
   width: 30px;
@@ -131,20 +152,10 @@ nav .menu-btn,
 nav .bars {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* styles for larger screens  */
 @media only screen and (min-width: 1025px) {
-  nav .menu-btn {
-    display: none;
-  }
-  nav #open-menu {
-    display: none !important;
-  }
-  nav #close-menu {
-    display: none !important;
-  }
-  nav header {
-    position: static;
-  }
-  nav nav {
+  nav {
     display: block !important;
     position: static;
     box-shadow: 0 0px 0px;
@@ -154,52 +165,84 @@ nav .bars {
     font-size: 1.4em;
     width: auto;
   }
-  nav nav ul {
+  nav ul {
     display: flex;
-    justify-content: flex-end; /* Adjust to your layout needs */
   }
-  nav nav li {
+  nav li {
     display: inline;
     padding: 1.2em 0;
   }
+  nav .menu-btn {
+    display: none;
+  }
+  nav #open-menu {
+    display: none !important;
+  }
+  nav #close-menu {
+    display: none !important;
+  }
 }
-@media screen and (max-width: 1024px) {
-  nav nav {
-    width: 100%;
+@media only screen and (min-width: 1025px) and (max-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 70vh;
+    width: 300px;
     background-color: #FFFFFF;
-    display: block;
+    display: none;
+    z-index: 1;
   }
   nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the items */
+    width: 100%;
+    list-style-type: none;
+    text-align: justify;
+    margin: 20px auto;
+    padding: 0;
   }
   nav li {
-    padding: 10px 0; /* Adjust spacing */
-  }
-}
-@media screen and (max-width: 768px) {
-  nav nav {
-    width: 100%;
-    background-color: #FFFFFF;
-    display: block;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the items */
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: justify;
   }
   nav .menu-btn {
-    display: block;
     position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 3; /* Ensure the button is above the navigation */
   }
-  nav .menu-icon {
-    display: flex;
+}
+@media only screen and (min-width: 1025px) and (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 70vh;
+    width: 300px;
+    background-color: #FFFFFF;
+    display: none;
+    z-index: 1;
   }
-  nav .bars {
-    display: block;
+  nav ul {
+    width: 100%;
+    list-style-type: none;
+    text-align: justify;
+    margin: 20px auto;
+    padding: 0;
+  }
+  nav li {
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: justify;
+  }
+  nav .menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }

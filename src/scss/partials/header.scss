@@ -1,18 +1,32 @@
-// Header styling
+// Partiell för header
 header {
     background-color: $primary-color;
-    padding: 10px;
+
+    h1 {
+        color: #fff;
+    }
 
     nav {
         ul {
             list-style: none;
-            display: flex;
-            justify-content: space-around;
+            padding: 0;
 
             li {
+                display: inline-block;
+                margin-right: 20px;
+
                 a {
                     text-decoration: none;
-                    color: white;
+                    color: #fff;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+
+                // @extend används här för att ärva stilar från a-taggen
+                &.active {
+                    @extend a;
                     font-weight: bold;
                 }
             }

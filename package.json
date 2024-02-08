@@ -6,7 +6,9 @@
   "scripts": {
     "start": "parcel src/index.html --no-cache --no-source-maps",
     "build": "parcel build src/index.html --no-cache --no-source-maps",
-    "watch": "parcel watch index.html",
+    "sass": "sass --watch main.scss:main.css",
+    "transpile-js": "babel src -d dist --presets @babel/preset-env",
+    "minify-js": "terser dist/javaScript.js -o dist/javaScript.min.js",
     "minify-html": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir src --output-dir dist"
   },
   "repository": {
@@ -15,7 +17,6 @@
   },
   "author": "Dania",
   "license": "ISC",
-  
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -27,10 +28,10 @@
     "events": "^3.3.0",
     "html-minifier": "^4.0.0",
     "parcel": "^2.11.0",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.8.1",
     "postcss": "^8.4.35",
     "postcss-custom-properties": "^13.3.4",
     "sass": "^1.70.0",
-    "sharp": "^0.31.1"
+    "sharp": "^0.31.3"
   }
 }
