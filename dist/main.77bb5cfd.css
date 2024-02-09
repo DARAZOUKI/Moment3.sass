@@ -1,6 +1,8 @@
 header {
   background-color: #3498db;
   padding: 30px;
+  display: flex;
+  width: 100%;
 }
 header h1 {
   color: #fff;
@@ -204,6 +206,8 @@ body {
   height: auto;
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -213,7 +217,8 @@ body {
 
 .content {
   padding: 20px;
-  max-width: 70ch;
+  max-width: 800px;
+  margin: 90px auto;
 }
 .content h1 {
   color: #3498db;
@@ -224,8 +229,9 @@ body {
   font-size: 1.2em;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 1024px) and (max-width: 768px) {
   .content {
+    margin-left: 0;
     max-width: 50ch;
   }
 }

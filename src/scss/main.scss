@@ -11,6 +11,8 @@ body {
     height: auto;
     width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 
 
     // Responsive font size
@@ -22,7 +24,9 @@ body {
 // Main content styling
 .content {
     padding: 20px;
-    max-width: 70ch; // Limiting maximum width
+    max-width: 800px;
+    margin: 90px auto;
+   
    
 
     h1 {
@@ -35,24 +39,27 @@ body {
         font-size: 1.2em;
     }
 }
-// Responsive layout adjustments
-@media screen and (max-width:1024px) and (min-width:768px){
-    // Add specific styles for smaller screens or narrow viewports
+
+@media screen and (max-width:1024px) and (max-width:768px){
+
     .content {
+       
+        margin-left: 0;
         max-width: 50ch;
     }
 }
-// Theme switch based on user preference
+
+ // Light theme
 @media (prefers-color-scheme: light) {
-    // Light theme
+   
     body {
         background-color: $light-background-color;
         color: $light-text-color;
     }
 }
-
+  // Dark theme
 @media (prefers-color-scheme: dark) {
-    // Dark theme
+  
     body {
         background-color: $dark-background-color;
         color: $dark-text-color;

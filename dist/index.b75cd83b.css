@@ -1,6 +1,8 @@
 header {
   background-color: #3498db;
+  width: 100%;
   padding: 30px;
+  display: flex;
 }
 
 header h1 {
@@ -223,6 +225,8 @@ body {
   background-color: #fff;
   width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
@@ -234,7 +238,8 @@ body {
 }
 
 .content {
-  max-width: 70ch;
+  max-width: 800px;
+  margin: 90px auto;
   padding: 20px;
 }
 
@@ -248,9 +253,10 @@ body {
   font-size: 1.2em;
 }
 
-@media screen and (width <= 1024px) and (width >= 768px) {
+@media screen and (width <= 1024px) and (width <= 768px) {
   .content {
     max-width: 50ch;
+    margin-left: 0;
   }
 }
 
