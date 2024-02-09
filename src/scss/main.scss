@@ -8,12 +8,9 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: $background-color;
     color: $text-color;
+    height: auto;
+    width: 100%;
 
-    // Dark mode
-    @media (prefers-color-scheme: dark) {
-        background-color: $dark-background-color;
-        color: $dark-primary-color;
-    }
 
     // Responsive font size
     @media screen and (max-width: 768px) {
@@ -24,6 +21,7 @@ body {
 // Main content styling
 .content {
     padding: 20px;
+    max-width: 70ch; // Limiting maximum width
    
 
     h1 {
@@ -34,5 +32,28 @@ body {
     p {
         margin-top: 10px;
         font-size: 1.2em;
+    }
+}
+// Responsive layout adjustments
+@media screen and (max-width: 70ch) {
+    // Add specific styles for smaller screens or narrow viewports
+    .content {
+        padding: 10px; // Adjust padding for smaller screens
+    }
+}
+// Theme switch based on user preference
+@media (prefers-color-scheme: light) {
+    // Light theme
+    body {
+        background-color: $light-background-color;
+        color: $light-text-color;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    // Dark theme
+    body {
+        background-color: $dark-background-color;
+        color: $dark-text-color;
     }
 }

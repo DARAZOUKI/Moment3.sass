@@ -215,21 +215,15 @@ footer {
   border-top: 2px solid #217dbb;
   width: 100%;
   padding: 10px;
-  position: fixed;
   bottom: 0;
 }
 
 body {
   color: #333;
   background-color: #fff;
+  width: 100%;
+  height: auto;
   font-family: Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #221f1f;
-    background-color: #84f6ac;
-  }
 }
 
 @media screen and (width <= 768px) {
@@ -239,6 +233,7 @@ body {
 }
 
 .content {
+  max-width: 70ch;
   padding: 20px;
 }
 
@@ -250,5 +245,25 @@ body {
 .content p {
   margin-top: 10px;
   font-size: 1.2em;
+}
+
+@media screen and (width <= 70ch) {
+  .content {
+    padding: 10px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #333;
+    background-color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background-color: #0e0437;
+  }
 }
 

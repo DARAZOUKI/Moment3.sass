@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html --no-cache --no-source-maps",
     "build": "parcel build src/index.html --no-cache --no-source-maps",
-    "sass": "sass --watch main.scss:main.css",
+    "sass": "sass --watch scss/main.scss:main.css",
     "transpile-js": "babel src -d dist --presets @babel/preset-env",
     "minify-js": "terser dist/javaScript.js -o dist/javaScript.min.js",
     "minify-html": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir src --output-dir dist"
