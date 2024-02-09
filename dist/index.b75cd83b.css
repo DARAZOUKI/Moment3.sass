@@ -247,7 +247,7 @@ body {
   font-size: 1.2em;
 }
 
-@media screen and (width <= 70ch) {
+@media screen and (width <= 1024px) {
   .content {
     padding: 10px;
   }

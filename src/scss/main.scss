@@ -35,10 +35,11 @@ body {
     }
 }
 // Responsive layout adjustments
-@media screen and (max-width: 70ch) {
+@media screen and (max-width:1024px) and(min-width:768px){
     // Add specific styles for smaller screens or narrow viewports
     .content {
         padding: 10px; // Adjust padding for smaller screens
+        max-width: 50ch;
     }
 }
 // Theme switch based on user preference
