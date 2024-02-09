@@ -1,14 +1,22 @@
-// Mixin for Flexbox Centering
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  // Mixins
+  @mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
 }
 
-// Mixin for Responsive Font Sizes
-@mixin responsive-font($size) {
-    font-size: $size;
-    @media screen and (max-width: 768px) {
-        font-size: $size * 0.8;
-    }
+.box-with-shadow {
+    @include box-shadow(2px, 2px, 5px, #888);
+}
+
+// Selector inheritance
+.menu-btn.close {
+    @extend .box-with-shadow;
+}
+
+// If/else-satser
+$is-light-theme: true;
+
+@if $is-light-theme {
+    background-color: $light-primary-color;
+} @else {
+    background-color: $dark-primary-color;
 }

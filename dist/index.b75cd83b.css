@@ -1,5 +1,6 @@
 header {
   background-color: #3498db;
+  padding: 30px;
 }
 
 header h1 {
@@ -14,7 +15,6 @@ header nav {
   font-size: 1.2em;
   display: none;
   position: absolute;
-  top: 10vh;
   left: 20px;
   right: 0;
 }
@@ -52,8 +52,8 @@ header nav ul li {
 header nav .menu-btn.close {
   cursor: pointer;
   z-index: 2;
-  background-color: #e5c643;
-  border: 2px solid #2c363f;
+  background-color: #ede8e8;
+  border: 2px solid #e8eaec;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ header nav .menu-btn:hover {
 
 header nav .menu-btn {
   cursor: pointer;
-  background-color: #e5c643;
+  background-color: #101010;
   border: 2px solid #000;
   border-radius: 5px;
   align-items: center;
@@ -220,21 +220,21 @@ footer {
 }
 
 body {
-  color: #2c3e50;
-  background-color: #ecf0f1;
+  color: #333;
+  background-color: #fff;
   font-family: Arial, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #ecf0f1;
-    background-color: #2c3e50;
+    color: #221f1f;
+    background-color: #84f6ac;
   }
 }
 
 @media screen and (width <= 768px) {
   body {
-    font-size: 16px;
+    font-size: 1em;
   }
 }
 
@@ -244,11 +244,11 @@ body {
 
 .content h1 {
   color: #3498db;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .content p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 1.2em;
 }
 

@@ -12,26 +12,27 @@ body {
     // Dark mode
     @media (prefers-color-scheme: dark) {
         background-color: $dark-background-color;
-        color: $dark-text-color;
+        color: $dark-primary-color;
     }
 
     // Responsive font size
     @media screen and (max-width: 768px) {
-        font-size: 16px;
+        font-size: 1em;
     }
 }
 
 // Main content styling
 .content {
     padding: 20px;
+   
 
     h1 {
         color: $primary-color;
-        font-size: 24px;
+        font-size: 1.5em;
     }
 
     p {
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 1.2em;
     }
 }

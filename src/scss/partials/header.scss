@@ -1,6 +1,7 @@
 // Partiell för header
 header {
     background-color: $primary-color;
+    padding: 30px;
 
     h1 {
         color: #fff;
@@ -13,7 +14,6 @@ header {
         position: absolute;
         right: 0;
         left: 20px;
-        top: 10vh;
         height: auto;
         width: 250px;
         display: none;
@@ -57,8 +57,8 @@ header {
             align-items: center;
             justify-content: center;
             padding: 8px;
-            background-color: #E5C643;
-            border: 2px solid #2C363F;
+            background-color: #ede8e8;
+            border: 2px solid #e8eaec;
             border-radius: 5px;
             cursor: pointer;
             z-index: 2;
@@ -73,7 +73,7 @@ header {
             display: flex;
             align-items: center;
             padding: 8px;
-            background-color: #E5C643;
+            background-color: #101010;
             border: rgb(0, 0, 0) solid 2px;
             cursor: pointer;
             border-radius: 5px;
