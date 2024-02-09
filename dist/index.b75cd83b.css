@@ -247,8 +247,9 @@ body {
   font-size: 1.2em;
 }
 
-@media screen and (width <= 1024px) {
+@media screen and (width <= 1024px) and (width >= 768px) {
   .content {
+    max-width: 50ch;
     padding: 10px;
   }
 }
