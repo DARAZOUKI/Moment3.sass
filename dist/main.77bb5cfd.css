@@ -203,6 +203,7 @@ body {
   color: #333333;
   height: auto;
   width: 100%;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 768px) {
   body {
@@ -225,7 +226,6 @@ body {
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .content {
-    padding: 10px;
     max-width: 50ch;
   }
 }

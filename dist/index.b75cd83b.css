@@ -224,6 +224,7 @@ body {
   width: 100%;
   height: auto;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 @media screen and (width <= 768px) {
@@ -250,7 +251,6 @@ body {
 @media screen and (width <= 1024px) and (width >= 768px) {
   .content {
     max-width: 50ch;
-    padding: 10px;
   }
 }
 
